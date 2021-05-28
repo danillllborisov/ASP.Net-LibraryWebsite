@@ -141,6 +141,8 @@ namespace PortfolioWebASP
             LinkButton8.Visible = false; //bookinventory
             LinkButton9.Visible = false; //book issuing
             LinkButton10.Visible = false; //member managemt 
+
+            Response.Redirect("homepage.aspx");
         }
     }
 }

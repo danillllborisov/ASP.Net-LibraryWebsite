@@ -36,7 +36,7 @@
                             <div class="input-group">
 
                            <asp:TextBox CssClass="form-control" ID="TextBox1" runat="server" placeholder="Author ID"></asp:TextBox>
-                            <asp:Button class="btn btn-primary" ID="Button2" runat="server" Text="Go" />
+                            <asp:Button class="btn btn-primary" ID="Button2" runat="server" Text="Go" OnClick="Button2_Click" />
                             </div>
                         </div>
                      </div>
@@ -53,13 +53,13 @@
                   
                   <div class="row">
                      <div class="col-4">
-                         <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-lg btn-block btn-success" />
+                         <asp:Button ID="Button1" runat="server" Text="Add" class="btn btn-lg btn-block btn-success" OnClick="Button1_Click" Width="289px" />
                      </div>
                       <div class="col-4">
-                         <asp:Button ID="Button3" runat="server" Text="Update" class="btn btn-lg btn-block btn-warning" />
+                         <asp:Button ID="Button3" runat="server" Text="Update" class="btn btn-lg btn-block btn-warning" OnClick="Button3_Click" />
                      </div>
                       <div class="col-4">
-                         <asp:Button ID="Button4" runat="server" Text="Delete" class="btn btn-lg btn-block btn-danger" />
+                         <asp:Button ID="Button4" runat="server" Text="Delete" class="btn btn-lg btn-block btn-danger" OnClick="Button4_Click" />
                      </div>
                   </div>
                </div>
