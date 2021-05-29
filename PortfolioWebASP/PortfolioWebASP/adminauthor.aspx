@@ -1,5 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminauthor.aspx.cs" Inherits="PortfolioWebASP.adminauthor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+          $(".table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable();
+          
+      });
+    </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -7,7 +16,7 @@
       <div class="row">
          <div class="col-md-6">
             <div class="card">
-               <div class="card-body">
+               <div class="card-body"> 
                   <div class="row">
                      <div class="col">
                         <center>
@@ -79,7 +88,7 @@
                      </div>
                   </div>
 
-                   
+                   <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:elibraryDBConnectionString %>" SelectCommand="SELECT * FROM [author_master_tbl]"></asp:SqlDataSource>
 
                   <div class="row">
                      <div class="col">
@@ -88,7 +97,12 @@
                   </div>
                   <div class="row">
                      <div class="col">
-                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server"></asp:GridView>
+                        <asp:GridView class="table table-striped table-bordered" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="author_id" DataSourceID="SqlDataSource1">
+                            <Columns>
+                                <asp:BoundField DataField="author_id" HeaderText="author_id" ReadOnly="True" SortExpression="author_id" />
+                                <asp:BoundField DataField="author_name" HeaderText="author_name" SortExpression="author_name" />
+                            </Columns>
+                         </asp:GridView>
                      </div>
                   </div>
                </div>
