@@ -1728,6 +1728,11 @@
     <Content Include="fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="homepage.aspx" />
     <Content Include="imgs\adminuser.png" />
+    <Content Include="imgs\b1.jpg" />
+    <Content Include="imgs\b2.jpg" />
+    <Content Include="imgs\b3.jpg" />
+    <Content Include="imgs\b4.jpg" />
+    <Content Include="imgs\b5.jpg" />
     <Content Include="imgs\book-online.png" />
     <Content Include="imgs\books.png" />
     <Content Include="imgs\books1.png" />
@@ -1899,6 +1904,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="book_inventory\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
